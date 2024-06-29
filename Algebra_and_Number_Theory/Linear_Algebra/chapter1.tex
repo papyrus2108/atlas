@@ -1,0 +1,20 @@
+\chapter{Vector Spaces}
+
+\begin{definition}
+    A \emph{vector space}\index{vector space} over a field \(F\), whose elements are referred to as \emph{scalars}, is a non-empty set \(V\), whose elements are referred to as \emph{vectors}, together with two binary operations. The first operation, called \emph{vector addition} or simply \emph{addition}, assigns to each pair \(\left(\symbfit{u},\symbfit{v}\right)\) of vectors in \(V\) a vector \(\symbfit{u}+\symbfit{v}\) in \(V\). The second operation, called \emph{scalar multiplication}, assigns to each pair \(\left(a,\symbfit{v}\right)\) in \(F\times V\) a vector \(a\symbfit{v}\) in \(V\). Furthermore, if we let \(\symbfit{u}\), \(\symbfit{v}\), \(\symbfit{w}\) be any vectors in \(V\), and \(a\), \(b\) be any scalars in \(F\), the following properties must be satisfied.
+    \begin{enumerate}
+        \item\label{Item.1} Addition is \emph{associative}, \(\symbfit{u}+\left(\symbfit{v}+\symbfit{w}\right)=\left(\symbfit{u}+\symbfit{v}\right)+\symbfit{w}\).
+        \item\label{Item.2} Addition is \emph{commutative}, \(\symbfit{u}+\symbfit{v}=\symbfit{v}+\symbfit{u}\).
+        \item\label{Item.3} There exists a vector \(\symbfup{0}\) in \(V\), called the \emph{zero vector}, such that \(\symbfit{u}+\symbfup{0}=\symbfup{0}+\symbfit{u}=\symbfit{u}\).
+        \item\label{Item.4} There exists a vector \(-\symbfit{u}\) in \(V\), called the \emph{additive inverse} of \(\symbfit{u}\), such that \(\symbfit{u}+\left(-\symbfit{u}\right)=\left(-\symbfit{u}\right)+\symbfit{u}=\symbfup{0}\).
+        \item Scalar multiplication is \emph{distributive with respect to vector addition}, \(a\left(\symbfit{u}+\symbfit{v}\right)=a\symbfit{u}+a\symbfit{v}\).
+        \item Scalar multiplication is \emph{distributive with respect to field addition}, \(\left(a+b\right)\symbfit{u}=a\symbfit{u}+b\symbfit{u}\).
+        \item Scalar multiplication is \emph{compatible with field multiplication}, \(a\left(b\symbfit{u}\right)=\left(ab\right)\symbfit{u}\).
+        \item \(1\symbfit{u}=\symbfit{u}\), where \(1\) denotes the multiplicative identity in \(F\).
+    \end{enumerate}
+    Such a vector space is also called an \emph{\(F\)-vector space}.
+\end{definition}
+
+\begin{remark}
+    \Cref{Item.1,Item.2,Item.3,Item.4} can be summarized by saying that \(\left(V,+\right)\) is an \emph{abelian group}.
+\end{remark}
