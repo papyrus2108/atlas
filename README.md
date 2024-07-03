@@ -1,6 +1,6 @@
 # Atlas
 
-[Atlas](https://github.com/papyrus2108/atlas) traverse les archives scientifiques.
+> Atlas traverse les archives scientifiques.
 
 - [Analysis and Differential Equations](#analysis-and-differential-equations)
     - [Mathematical Analysis](#mathematical-analysis)
