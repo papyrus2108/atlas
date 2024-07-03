@@ -1,6 +1,6 @@
 # Atlas
 
-[Atlas](https://github.com/papyrus2108/atlas) is the library where academic lecture notes are kept.
+[Atlas](https://github.com/papyrus2108/atlas) traverse les archives scientifiques.
 
 - [Analysis and Differential Equations](#analysis-and-differential-equations)
     - [Mathematical Analysis](#mathematical-analysis)
