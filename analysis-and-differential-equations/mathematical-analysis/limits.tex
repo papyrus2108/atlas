@@ -1,5 +1,71 @@
-\chapter{Limits}
+\chapter{Limites}
 
-\begin{definition}
-    A sequence \(\set{x_n}_{n=0}^{+\infty}\) in a metric space \(\left(X,d\right)\) is said to \emph{converge}, if there exists a point \(x\in X\), such that for every \(\varepsilon>0\), there is an index \(N\), where \(d\left(x_n,x\right)<\varepsilon\) for all integers \(n>N\). In this case, we say that \(x\) is the \emph{limit}\index{limit!of a sequence} of \(\set{x_n}\), or that \(\set{x_n}\) converges to \(x\), written \(\lim_{n\to+\infty}x_n=x\) or simply \(x_n\to x\). Symbolically, \[\left(\lim_{n\to+\infty}x_n=x\right)\coloneq\forall_{\varepsilon\in\symbb{R}_{>0}}\exists_N\forall_{n\in\symbb{Z}_{\geqslant0}}\left(n>N\implies\left(x_n,x\right)<\varepsilon\right).\] A sequence that does not converge is said to \emph{diverge}.
+% \begin{definition}[limit point]
+%     Let \(\left(X,\tau\right)\) be a topological space, \(\symcal{B}\) a filter base on \(X\). We say \(x\) is a limit point of \(\symcal{B}\), if there exists a set \(E\subseteq X\), such that \(x\), as a limit point of \(E\), satisfies \[\emptyset\notin\eval{\symcal{B}}[E]\geqslant\symcal{N}\left(x\right).\]
+% \end{definition}
+
+% \begin{definition}[limit set]
+%     Given \(f\colon S\to\left(X,\tau\right)\), let \(\Omega\coloneq\ker\overline{f\left(\symcal{B}\right)}\), then \[\forall_{x\in\Omega}\exists_{E}\left(\lim f\left(\set{B\cap E\in\symcal{P}\left(X\right)}[B\in\symcal{B}]\right)=x\right)\]
+% \end{definition}
+
+% \begin{definition}[derived set and closure]
+%     The set of all limit points of a filter base \(\symcal{B}\) is called its limit set, denoted \(\symcal{B}'\).
+% \end{definition}
+
+\begin{definition}[limite]\label{definition:1.1}
+    Soit \(f\) une application d'un ensemble \(S\) vers un espace topologique \(\left(X,\tau\right)\),\marginnote{Ici \(\tau\) est la topologie sur \(X\).} et \(\symcal{B}\) une base de filtre sur \(S\). Un point \(x\in X\) est appelé une \emph{limite}\index{limite!d'une fonction} de \(f\) sur \(\symcal{B}\), si pour tout
+    \begin{equation}
+        U\in\symcal{N}\left(x\right)\coloneq\set{U\in\tau}[U\ni x],\marginnote{Ici, nous disons que \(\symcal{N}\left(x\right)\) est le filtre de voisinage de \(x\), et \(U\) est un voisinage de \(x\).}
+    \end{equation}
+    il existe un \(B\in\symcal{B}\) tel que \(f\left(B\right)\subseteq U\). Dans ce cas, nous disons aussi que \(f\) \emph{tend} vers \(x\in X\) le long de \(\symcal{B}\), noté
+    \begin{equation}
+        \lim_{\symcal{B}}f=x,\qquad\lim f\left(\symcal{B}\right)=x,\qquad\text{ou}\qquad f\left(\symcal{B}\right)\to x.
+    \end{equation}
+    Symboliquement,
+    \begin{equation}
+        f\left(\symcal{B}\right)\to x\coloniff f\left(\symcal{B}\right)\geqslant\symcal{N}\left(x\right).
+    \end{equation}
 \end{definition}
+
+% \begin{definition}
+%     A sequence \(\set{x_n}_{n=0}^{+\infty}\) in a metric space \(\left(X,d\right)\) is said to \emph{converge}, if there exists a point \(x\in X\), such that for every \(\varepsilon>0\), there is an index \(N\), where \(d\left(x_n,x\right)<\varepsilon\) for all integers \(n>N\). In this case, we say that \(x\) is the \emph{limit}\index{limit!of a sequence} of \(\set{x_n}\), or that \(\set{x_n}\) converges to \(x\), written \(\lim_{n\to+\infty}x_n=x\) or simply \(x_n\to x\). Symbolically, \[\left(\lim_{n\to+\infty}x_n=x\right)\coloneq\forall_{\varepsilon\in\symbb{R}_{>0}}\exists_N\forall_{n\in\symbb{Z}_{\geqslant0}}\left(n>N\implies\left(x_n,x\right)<\varepsilon\right).\] A sequence that does not converge is said to \emph{diverge}.
+% \end{definition}
+
+\begin{example}[limit of a sequence]
+    In \cref{definition:1.1}, let \(S=\symbb{N}\), then the function
+    \begin{equation}
+        f\colon\symbb{N}\to X,\quad n\mapsto x_n
+    \end{equation}
+    defines a sequence \(\set{x_n}_{n\in\symbb{N}}\) in the topological space \(\left(X,\tau\right)\). Now let
+    \begin{equation}
+        \symcal{B}=\left(\symbb{N}\ni n\to+\infty\right)\coloneq\set{\symbb{N}_{>N}}[N\in\symbb{N}].
+    \end{equation}
+    If for any neighborhood \(U\) of a point \(x\in X\), there exists some \(N\in\symbb{N}\) such that
+    \begin{equation}
+        n>N\implies x_n\in U,
+    \end{equation}then \(x\) is called a \emph{limit}\index{limit!of a sequence} of \(\set{x_n}\). In this case, we also say that \(\set{x_n}\) \emph{converges} to \(x\), denoted by
+    \begin{equation}
+        \lim_{n\to+\infty}x_n=x\qquad\text{or}\qquad x_n\to x.
+    \end{equation}
+    A sequence that does not converge to any point is said to \emph{diverges}.
+\end{example}
+
+\begin{example}[limit of a real function]
+    In \cref{definition:1.1}, let \(S\subseteq X=\symbb{R}\),
+    \begin{align}
+        \symcal{B}&=\left(t\to a\in\overline{\symbb{R}}\right)\\
+        &\coloneq
+        \begin{cases*}
+            \set{\symbb{R}_{<M}}[M\in\symbb{R}] & if \(a=-\infty\), \\
+            \set{\symbb{R}_{>M}}[M\in\symbb{R}] & if \(a=+\infty\), \\
+            \set{\symbb{R}_{>a-\delta_1}\cap\symbb{R}_{<a+\delta_2}-\set{a}}[\left(\delta_1,\delta_2\right)\in\symbb{R}^2] & otherwise.
+        \end{cases*}
+    \end{align}
+    If for any neighborhood \(U\) of a point \(A\in X\), there exists some \(V\in\symcal{B}\) such that
+    \begin{equation}
+        t\in V\implies f\left(t\right)\in U,
+    \end{equation}then \(A\) is called a \emph{limit}\index{limit!of a real function} of \(f\left(t\right)\) as \(t\) tends to \(a\). In this case, we also say that \(f\left(t\right)\) \emph{tends} to \(A\) as \(t\) tends to \(a\), denoted by
+    \begin{equation}
+        \lim_{t\to a}f\left(t\right)=A.
+    \end{equation}
+\end{example}
