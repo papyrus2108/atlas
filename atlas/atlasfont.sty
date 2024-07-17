@@ -1,0 +1,95 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{atlasfont}
+
+\RequirePackage{fontspec}
+\RequirePackage{unicode-math}
+
+\defaultfontfeatures{Extension=.otf}
+
+\unimathsetup{
+    math-style=ISO,
+    bold-style=ISO,
+    partial=upright,
+    warnings-off={mathtools-colon,mathtools-overbracket}
+}
+
+\setmainfont{MinionPro}[
+    NFSSFamily=atlasrm,
+    UprightFont=*-Regular,
+    BoldFont=*-Bold,
+    ItalicFont=*-It,
+    BoldItalicFont=*-BoldIt
+]
+
+\setsansfont{MyriadPro}[
+    NFSSFamily=atlassf,
+    UprightFont=*-Regular,
+    BoldFont=*-Bold,
+    ItalicFont=*-It,
+    BoldItalicFont=*-BoldIt
+]
+
+\setmonofont{CourierStd}[
+    NFSSFamily=atlastt,
+    UprightFont=*,
+    BoldFont=*-Bold,
+    ItalicFont=*-Oblique,
+    BoldItalicFont=*-BoldOblique
+]
+
+\setmathfont{MinionMath-Regular}[
+    SizeFeatures={
+            {Size=-6,Font=MinionMath-Tiny,Style=MathScriptScript},
+            {Size=6-8.4,Font=MinionMath-Capt,Style=MathScript},
+            {Size=8.4-13,Font=MinionMath-Regular},
+            {Size=13-19.9,Font=MinionMath-Subh},
+            {Size=19.9-,Font=MinionMath-Disp}
+        }
+]
+
+\setmathfont{MinionMath-Bold}[
+    range={bfup->up,bfit->it,bfcal->cal,bfscr->scr,bffrak->frak},
+    SizeFeatures={
+            {Size=-6,Font=MinionMath-BoldTiny,Style=MathScriptScript},
+            {Size=6-8.4,Font=MinionMath-BoldCapt,Style=MathScript},
+            {Size=8.4-13,Font=MinionMath-Bold},
+            {Size=13-19.9,Font=MinionMath-BoldSubh},
+            {Size=19.9-,Font=MinionMath-BoldDisp}
+        }
+]
+
+\let\mathup\relax
+\let\mathit\relax
+\let\mathbfup\relax
+\let\mathbfit\relax
+
+\let\mathsfup\relax
+\let\mathsfit\relax
+\let\mathbfsfup\relax
+\let\mathbfsfit\relax
+
+\DeclareMathAlphabet\mathup{TU}{atlasrm}{m}{n}
+\DeclareMathAlphabet\mathit{TU}{atlasrm}{m}{it}
+\DeclareMathAlphabet\mathbfup{TU}{atlasrm}{bx}{n}
+\DeclareMathAlphabet\mathbfit{TU}{atlasrm}{bx}{it}
+
+\DeclareMathAlphabet\mathsfup{TU}{atlassf}{m}{n}
+\DeclareMathAlphabet\mathsfit{TU}{atlassf}{m}{it}
+\DeclareMathAlphabet\mathbfsfup{TU}{atlassf}{bx}{n}
+\DeclareMathAlphabet\mathbfsfit{TU}{atlassf}{bx}{it}
+
+\DeclareMathAlphabet\mathttup{TU}{atlastt}{m}{n}
+\DeclareMathAlphabet\mathttit{TU}{atlastt}{m}{it}
+\DeclareMathAlphabet\mathbfttup{TU}{atlastt}{bx}{n}
+\DeclareMathAlphabet\mathbfttit{TU}{atlastt}{bx}{it}
+
+\SetMathAlphabet\mathup{bold}{TU}{atlasrm}{bx}{n}
+\SetMathAlphabet\mathit{bold}{TU}{atlasrm}{bx}{it}
+
+\SetMathAlphabet\mathsfup{bold}{TU}{atlassf}{bx}{n}
+\SetMathAlphabet\mathsfit{bold}{TU}{atlassf}{bx}{it}
+
+\SetMathAlphabet\mathttup{bold}{TU}{atlastt}{bx}{n}
+\SetMathAlphabet\mathttit{bold}{TU}{atlastt}{bx}{it}
+
+\endinput

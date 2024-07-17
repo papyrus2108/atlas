@@ -1,0 +1,48 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{atlasthrm}
+
+\RequirePackage{amsthm}
+\RequirePackage{thmtools}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{\theoremname}[chapter]
+\newtheorem{lemma}{\lemmaname}[chapter]
+\newtheorem{corollary}{\corollaryname}[chapter]
+\newtheorem{proposition}{\propositionname}[chapter]
+\newtheorem{conjecture}{\conjecturename}[chapter]
+\newtheorem{criterion}{\criterionname}[chapter]
+\newtheorem{assertion}{\assertionname}[chapter]
+
+\theoremstyle{definition}
+\newtheorem{definition}{\definitionname}[chapter]
+\newtheorem{condition}{\conditionname}[chapter]
+\newtheorem{problem}{\problemname}[chapter]
+\newtheorem{example}{\examplename}[chapter]
+\newtheorem{exercise}{\exercisename}[chapter]
+\newtheorem{algorithm}{\algorithmname}[chapter]
+\newtheorem{question}{\questionname}[chapter]
+\newtheorem{axiom}{\axiomname}[chapter]
+\newtheorem{property}{\propertyname}[chapter]
+\newtheorem{assumption}{\assumptionname}[chapter]
+\newtheorem{hypothesis}{\hypothesisname}[chapter]
+
+\theoremstyle{remark}
+\newtheorem*{remark}{\remarkname}
+\newtheorem*{note}{\notename}
+\newtheorem*{notation}{\notationname}
+\newtheorem*{claim}{\claimname}
+\newtheorem*{summary}{\summaryname}
+\newtheorem*{acknowledgment}{\acknowledgmentname}
+\newtheorem*{case}{\casename}
+\newtheorem*{conclusion}{\conclusionname}
+
+\newenvironment{solution}[1][\solutionname]{%
+    \par
+    \normalfont \topsep6\p@\@plus6\p@\relax
+    \trivlist
+    \item[\hskip\labelsep
+                \itshape
+                #1\@addpunct{.}]\ignorespaces
+}{\endtrivlist\@endpefalse}
+
+\endinput

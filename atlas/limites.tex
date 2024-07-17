@@ -1,0 +1,16 @@
+\chapter{Limites}
+
+\begin{definition}[limite]\label{definition:1.1}
+    Soit \(f\) une application d'un ensemble \(S\) vers un espace topologique \(\left(X,\tau\right)\),\marginnote{Ici \(\tau\) est la topologie sur \(X\).} et \(\symcal{B}\) une base de filtre sur \(S\). Un point \(x\in X\) est appelé une \emph{limite}\index{limite!d'une fonction} de \(f\) sur \(\symcal{B}\), si pour tout
+    \begin{equation}
+        U\in\symcal{N}\left(x\right)\coloneq\set{U\in\tau}[U\ni x],\marginnote{Ici, nous disons que \(\symcal{N}\left(x\right)\) est le filtre de voisinage de \(x\), et \(U\) est un voisinage de \(x\).}
+    \end{equation}
+    il existe un \(B\in\symcal{B}\) tel que \(f\left(B\right)\subseteq U\). Dans ce cas, nous disons aussi que \(f\) \emph{tend} vers \(x\in X\) le long de \(\symcal{B}\), noté
+    \begin{equation}
+        \lim_{\symcal{B}}f=x,\qquad\lim f\left(\symcal{B}\right)=x,\qquad\text{ou}\qquad f\left(\symcal{B}\right)\to x.
+    \end{equation}
+    Symboliquement,
+    \begin{equation}
+        f\left(\symcal{B}\right)\to x\coloniff f\left(\symcal{B}\right)\geqslant\symcal{N}\left(x\right).
+    \end{equation}
+\end{definition}

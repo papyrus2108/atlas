@@ -1,0 +1,15 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{atlasbidx}
+
+\RequirePackage{biblatex}
+\RequirePackage{imakeidx}
+
+\ExecuteBibliographyOptions{autolang=other}
+\DeclarePrintbibliographyDefaults{heading=bibintoc}
+
+\addbibresource{refs.bib}
+\nocite{*}
+
+\makeindex[intoc,columns=2,columnseprule]
+
+\endinput
